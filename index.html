@@ -1,0 +1,138 @@
+<!DOCTYPE htmlinnertim>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./mediaquery.css" />
+
+    <title>My portfolio</title>
+  </head>
+
+  <body>
+    <section id="home">
+      <section class="nav">
+        <div>
+          <a href="./index.html"
+            ><img id="logo" src="./Img/logo.png" alt="logo"
+          /></a>
+        </div>
+
+        <div class="navbar">
+          <a href="./index.html">Home</a>
+          <a href="#about">About</a>
+          <a href="#skill">Skill</a>
+          <a href="#project">Projects</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div id="menucont">
+          <div id="bails">
+            <span class="spn1"></span><span class="spn2"></span>
+          </div>
+          <div id="stumps">
+            <span></span><span class="spn3"></span><span class="spn4"></span>
+          </div>
+        </div>
+        <div class="navbar1">
+          <a href="./index.html">Home</a>
+          <a href="#about">About</a>
+          <a href="#skill">Skill</a>
+          <a href="#project">Projects</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </section>
+      <section id="herosec">
+        <div id="innerherosec">
+          <div class="herocontent">
+            <h1>Hi , I'm Kapil.</h1>
+            <h2>I'm a</h2>
+            <h2>web designer</h2>
+            <h2>and</h2>
+            <h2>web developer.</h2>
+            <h3>I'm passionate about designing and building websites</h3>
+            <h3>which leave a lasting impression.</h3>
+          </div>
+          <div>
+            <h1 id="bgshape"></h1>
+            <img id="myimg" src="./Img/myimg.png" alt="my img" />
+          </div>
+        </div>
+        <div id="conbtncon">
+          <a href="#project"><button id="btnproject">Projects</button></a>
+          <a href="#contact"><button id="btncontact">Contact</button></a>
+          <a href="https://linkedin.com/in/kapil-raj-thevar-16613528b">
+            <img
+              src="./Img/linkedin.png"
+              alt="linkedin profile"
+              width="45px"
+              height="45px"
+            />
+          </a>
+          <a href="https://github.com/Kapil3Raj">
+            <img
+              src="./Img/github.png"
+              alt="github profile"
+              width="44px"
+              height="44px"
+            />
+          </a>
+        </div>
+      </section>
+    </section>
+
+    <!------------------- page 1 over ------------------->
+    <section id="about">
+      <h1>Click the switch</h1>
+      <div class="aboutcon">
+        <div class="abtcon1">
+          <img src="./Img/switch_off.svg" onclick="lighton" />
+          <h2 class="abttext">
+            <span>Hello there! </span>I'm a passionate second-year student on
+            the exciting journey of pursuing my undergraduate degree in computer
+            engineering. I find joy in bringing ideas to life through code and
+            design.
+          </h2>
+        </div>
+        <div class="abtcon2">
+          <h2 class="abttext">
+            Beyond the world of code, I find solace in the realm of creativity.
+            Sketching and painting are not just my hobbies; they are outlets for
+            self-expression and imagination. When I'm not at my desk coding, you
+            might find me lost in the captivating worlds of movies and
+          </h2>
+          <img src="./Img/switch_off.svg" />
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="coolani">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <form id="cform" action="https://api.web3forms.com/submit" method="POST">
+        <h1>Contact form</h1>
+        <input
+          type="hidden"
+          name="access_key"
+          value="fb84ece0-6356-4284-a2d8-a938b2534fb9"
+        />
+        <input type="text" name="name" placeholder="Name" required />
+        <input
+          type="email"
+          name="email"
+          placeholder="E-mail address"
+          required
+        />
+        <textarea name="message" required placeholder="Your message"></textarea>
+        <button type="submit">Submit Form</button>
+      </form>
+    </section>
+
+    <script src="./index.js"></script>
+  </body>
+</html>

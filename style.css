@@ -1,0 +1,553 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300&family=Tourney:wght@100;200;300&display=swap');
+/* font-family: 'Poppins', sans-serif;
+font-family: 'Tourney', sans-serif; */
+
+:root {
+    --black:rgb(0,0,0);
+    --white: #ffffff;
+    --grey:rgb(30,30,30,.5)
+  }
+
+@keyframes bgimg {
+
+    20% {
+        clip-path: polygon(100% 25%, 79% 80%, 29% 93%, 0 47%, 27% 5%, 66% 0);
+    }
+
+    40% {
+        clip-path: polygon(94% 63%, 45% 93%, 7% 74%, 0 16%, 46% 0, 86% 0);
+    }
+
+    60% {
+        clip-path: polygon(100% 25%, 79% 80%, 29% 93%, 0 47%, 27% 5%, 66% 0);
+    }
+
+    80% {
+        clip-path: polygon(82% 1%, 93% 55%, 78% 88%, 28% 81%, 0 43%, 31% 6%);
+    }
+
+    100% {
+        clip-path: polygon(65% 3%, 97% 37%, 85% 69%, 45% 93%, 0 63%, 15% 6%);
+    }
+
+}
+
+@keyframes lighton {
+
+    0%,
+    47%,
+    51%,
+    55%,
+    100% {
+        box-shadow: 0 0 1.2em var(--white);
+        text-shadow: 0 0 0.5em var(--white);
+    }
+
+    45%,
+    49%,
+    53%,
+    60% {
+        box-shadow: none;
+        text-shadow: none;
+    }
+}
+
+@keyframes progline {
+    0%{
+        height: 0;
+    } 
+    100%{
+        height: 80%;
+      }
+}
+
+@keyframes three_d_rotX{
+    0%{
+        transform: rotateX(0deg);
+    }
+    100%{
+        transform:rotateX(360deg)
+    }
+}
+
+@keyframes three_d_rotY{
+    0%{
+        transform: rotateY(0deg);
+    }
+    100%{
+        transform:rotateY(360deg)
+    }
+}
+
+@keyframes three_d_rotZ{
+    0%{
+        transform: rotateZ(0deg);
+    }
+    100%{
+        transform:rotateZ(360deg)
+    }
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+
+}
+
+
+
+
+.nav {
+    width: 100%;
+    position: fixed;
+    top :0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    z-index: 10;
+
+}
+
+#logo {
+    padding: 10px;
+    width: 10rem;
+    height: 5rem;
+
+}
+
+.navbar {
+    height: 4rem;
+    background-color: var(--white);
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40rem;
+    gap: 3.5rem;
+    border-radius: 50px;
+ 
+
+}
+
+.navbar>a {
+    padding: 7px;
+    text-decoration: none;
+    font-size: larger;
+    font-weight: 600;
+    color: var(--black);
+    transition: all ease-in 60ms;
+}
+
+.navbar>a:hover {
+    border: 3px solid var(--black);
+    border-top: 2px;
+    border-left: 2px;
+}
+
+.navbar1 {
+    display: none;
+}
+
+
+/* navigation bar */
+#herosec {
+
+    margin-top: 100px;
+    margin-bottom: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    gap: 1rem;
+}
+
+#innerherosec {
+    display: flex;
+    gap: 5rem;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+
+}
+
+.herocontent {
+    display: flex;
+    flex-flow: column wrap;
+    margin-left: 10px;
+
+}
+
+.herocontent h1 {
+    font-size: 4rem;
+}
+
+.herocontent h1::before {
+
+    position: absolute;
+    left: 0;
+    content: '';
+    background-color: rgb(30, 30, 30);
+    filter: opacity(50%);
+    width: 100%;
+    height: 24rem;
+    z-index: -1;
+
+}
+
+
+.herocontent h2 {
+    font-size: 2.5rem;
+    font-weight: 400;
+}
+
+.herocontent h2:nth-child(3),
+h2:nth-child(5) {
+    font-family: 'Tourney', sans-serif;
+    font-weight: 300;
+    color :var(--white);
+}
+
+
+.herocontent h3 {
+    font-size: 1.3rem;
+}
+
+#myimg {
+    height: 26rem;
+
+}
+
+
+#bgshape::before {
+    content: "";
+    position: absolute;
+    background-color: var(--grey);
+    clip-path: polygon(65% 3%, 97% 37%, 85% 69%, 45% 93%, 0 63%, 15% 6%);
+    height: 24rem;
+    width: 23rem;
+    z-index: -1;
+    animation-name: bgimg;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+}
+
+#conbtncon{
+    display: flex;
+     align-items: center;
+      gap: 1rem;
+}
+
+#herosec>div:last-child {
+    display: flex;
+
+}
+
+
+
+#btnproject {
+    
+    height: 3rem;
+    width: 9rem;
+    background-color :var(--white);
+    color: rgb(0, 0, 0);
+    font-weight: 700;
+    font-size: medium;
+    letter-spacing: 1px;
+    border-radius: 27px;
+    border: 2px solid;
+}
+
+#btnproject:hover {
+    background-color: rgb(0, 0, 0);
+    color :var(--white);
+    font-weight: 500;
+}
+
+#btncontact {
+    
+    height: 3rem;
+    width: 9rem;
+    background-color :var(--white);
+    color: var(--black);
+    font-weight: 700;
+    font-size: medium;
+    letter-spacing: 1px;
+    border-radius: 27px;
+    border: 2px solid;
+}
+
+#btncontact:hover {
+    background-color: var(--black);
+    color :var(--white);
+    font-weight: 500;
+}
+
+.linkdbtn{
+    height: 1rem;
+}
+
+/* page 1 over */
+
+#about {
+    background-color: rgb(30, 30, 30,.8);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    
+    
+}
+
+#about>h1 {
+    color :var(--white);
+    text-align: center;
+}
+
+.aboutcon {
+    
+    display: flex;
+    flex-direction: column;
+    height: 30%;
+    width: 100%;
+    justify-content: space-between;
+
+}
+
+
+.abtcon1 {
+    
+    margin: 5px;
+    display: flex;
+    width: 99%;
+    height: 20rem;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    
+
+}
+
+
+.abttext {
+    padding: 20px;
+    width: 45rem;
+    color: var(--grey);
+    border: 3px solid var(--grey);
+
+
+}
+
+.abtcon1>h2>span {
+    font-size: xx-large;
+}
+
+.abtcon1>img {
+    width: 15rem;
+    height: 10rem;
+    cursor: pointer;
+}
+
+.abtcon2 {
+    
+    margin: 5px;
+    display: flex;
+    width: 99%;
+    height: 20rem;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap-reverse;
+    gap: 1.5rem;
+
+}
+
+.abtcon2>img {
+    width: 15rem;
+    height: 10rem;
+    cursor: pointer;
+}
+
+.glow {
+    animation-name: lighton;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    color :var(--white);
+    border: 3px solid var(--white);
+
+}
+
+
+/* <---------contact----------> */
+
+#contact{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+    display: flex;
+    
+
+    
+
+}
+
+.coolani{
+    
+    flex-grow: 3;
+    height: 30rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(20deg);
+    
+    
+    
+}
+
+.coolani > span:nth-child(1){
+    position: absolute;
+    height: 90%;
+    width: 60%;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 5px solid var(--black);
+    animation-name: three_d_rotX;
+    animation-iteration-count: infinite;
+    animation-duration: 25s;
+}
+
+.coolani > span:nth-child(2){
+    position: absolute;
+    height: 80%;
+    width: 50%;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 5px solid var(--black);
+    animation-name: three_d_rotY;
+    animation-iteration-count: infinite;
+    animation-duration: 20s;
+}
+
+.coolani > span:nth-child(3){
+    position: absolute;
+    height: 14rem;
+    width: 14rem;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 5px solid var(--black);
+    animation-name: three_d_rotX;
+    animation-iteration-count: infinite;
+    animation-duration: 15s;
+}
+
+.coolani > span:nth-child(4){
+    position: absolute;
+    height: 60%;
+    width: 30%;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 5px solid var(--black);
+    animation-name: three_d_rotY;
+    animation-iteration-count: infinite;
+    animation-duration: 10s;
+}
+
+.coolani > span:nth-child(5){
+    position: absolute;
+    height: 50%;
+    width: 20%;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 5px solid var(--black);
+    animation-name: three_d_rotX;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;
+}
+
+.coolani > span:nth-child(6){
+    position: absolute;
+    height:8rem;
+    width: 8rem;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 5px solid var(--black);
+    animation-name: three_d_rotY;
+    animation-iteration-count: infinite;
+    animation-duration: 2.5s;
+}
+
+
+
+
+
+
+#cform{
+    padding: 10px;
+    flex-grow: 3;
+    height: 30rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    
+
+}
+
+#cform > input{
+    border: 2px solid black;
+    height: 2.5rem;
+    width: 100%;
+    padding: 5px;  
+    background: rgb(0,0,0);
+    color: var(--white);
+    border-radius: 10px;
+    font-size:1rem ;
+}
+
+textarea{
+    border: 2px solid black;
+    height: 13rem;
+    width: 100%;
+    padding: 5px;  
+    background: rgb(0,0,0);
+    color: var(--white);
+    border-radius: 10px;
+    font-size:1rem ;
+}
+
+#cform > button{
+    height: 3rem;
+    width: 9rem;
+    background-color :var(--white);
+    color: rgb(0, 0, 0);
+    font-weight: 700;
+    font-size: medium;
+    letter-spacing: 1px;
+    border-radius: 27px;
+    border: 2px solid;
+}
+
+#cform > button:hover {
+    background-color: rgb(0, 0, 0);
+    color :var(--white);
+    font-weight: 500;
+}
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
